@@ -1,0 +1,24 @@
+.btn-page {
+  border: 2px solid #ac2929;
+  background-color: #64ac29;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-size: 12px;
+  outline: none;
+  transition: 0.2s;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.not-found {
+  color: #ac2929;
+}
+.btn-page:hover:disabled {
+  cursor: not-allowed;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}

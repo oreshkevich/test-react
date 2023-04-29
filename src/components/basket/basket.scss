@@ -1,0 +1,134 @@
+.checkout-page {
+  width: 55%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto 0;
+
+  .checkout-header {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgrey;
+
+    .header-block {
+      text-transform: capitalize;
+      width: 23%;
+
+      &:last-child {
+        width: 8%;
+      }
+    }
+  }
+
+  .total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 36px;
+  }
+}
+
+.button-wrap {
+  margin-top: 20px;
+}
+
+.form {
+  margin-top: 50px;
+  width: 100%;
+
+  text-align: center;
+}
+
+.form__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  background: #767a81;
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 30px 30px 30px;
+}
+.form__item {
+  margin-right: 10px;
+}
+.form__input {
+  cursor: pointer;
+  width: 257px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  border: 1px solid #5c87db;
+}
+
+input::-webkit-input-placeholder {
+  color: #b7bac1;
+}
+input:-moz-placeholder {
+  color: #b7bac1;
+}
+
+.form__control {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.button__form {
+  cursor: pointer;
+  border-width: 0;
+  margin-top: 25px;
+  margin-right: 30px;
+  padding: 10px 0;
+  width: 158px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background: #1e4b05;
+  border-radius: 10px;
+}
+.button__dirty {
+  cursor: pointer;
+  border-width: 0;
+  margin-top: 25px;
+  margin-right: 30px;
+  padding: 10px 0;
+  width: 158px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background: #a7a7a8;
+  border-radius: 10px;
+}
+
+.input-field {
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  display: block;
+  width: 40%;
+  font-weight: 400;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid black;
+}
+
+.small {
+  color: rgb(139, 8, 8);
+}

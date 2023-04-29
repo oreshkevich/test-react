@@ -1,0 +1,38 @@
+.card {
+  position: relative;
+}
+
+.card__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card__item {
+  max-width: 255px;
+  border: 1px solid #000;
+  background-color: #dbd9d9;
+  border-radius: 20px;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 1.3125rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.card__description {
+  height: 96px;
+  padding-top: 21px;
+}
+.card__text {
+  text-align: center;
+}
+.card__text-span {
+  padding-right: 20px;
+}
