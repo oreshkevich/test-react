@@ -63,15 +63,15 @@ const Main = ({ addToOrder }) => {
   return (
     <div className="grid">
       <div>
-        <h2>Бренды</h2>
+        <h2>Brands</h2>
 
         <CheckBoxList handleCheckedBrand={handleCheckedBrand} />
         <div className="button-wrap">
           <button onClick={handleSort} className="button">
-            Применить
+            Apply
           </button>
           <button onClick={handleThrow} className="button-throw">
-            х Сбросить
+            &#10005; Throw off
           </button>
         </div>
       </div>

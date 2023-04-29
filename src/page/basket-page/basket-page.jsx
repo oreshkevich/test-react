@@ -1,5 +1,11 @@
 import { Basket } from "../../components/basket/basket";
-const BasketPage = ({ cartItems, removeItem, addItem, clearItem }) => {
+const BasketPage = ({
+  cartItems,
+  removeItem,
+  addItem,
+  clearItem,
+  clearItemPost,
+}) => {
   return (
     <div>
       <Basket
@@ -7,6 +13,7 @@ const BasketPage = ({ cartItems, removeItem, addItem, clearItem }) => {
         removeItem={removeItem}
         addItem={addItem}
         clearItem={clearItem}
+        clearItemPost={clearItemPost}
       />
     </div>
   );

@@ -58,6 +58,10 @@ function App() {
     const cartFilterItem = cartItems.filter((cartItem) => cartItem.id !== cart);
     setCartItems(cartFilterItem);
   };
+  const clearItemPost = () => {
+    const cartFilterItem = [];
+    setCartItems(cartFilterItem);
+  };
 
   return (
     <>
@@ -74,6 +78,7 @@ function App() {
                   removeItem={removeItem}
                   addItem={addItem}
                   clearItem={clearItem}
+                  clearItemPost={clearItemPost}
                 />
               }
             />

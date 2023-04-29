@@ -5,7 +5,13 @@ import "./basket.scss";
 import Spinner from "./../spinner/spinner";
 
 const Basket = (props) => {
-  const { cartItems = [], removeItem, addItem, clearItem } = props;
+  const {
+    cartItems = [],
+    removeItem,
+    addItem,
+    clearItem,
+    clearItemPost,
+  } = props;
   const [sumCart, setSumCart] = useState(0);
   const [isFormChange, setFormChange] = useState(false);
   const sumItem = (cart) => {
@@ -43,12 +49,13 @@ const Basket = (props) => {
   const reset = () => {
     setFirstName("");
     setPhone("");
+    clearItemPost();
   };
   const validateName = (val) => {
     return val.length > 3;
   };
   const validatePhone = (val) => {
-    if (val.search(/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g) !== -1) {
+    if (val.search(/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\\./0-9]*$/g) !== -1) {
       return true;
     }
   };
@@ -78,21 +85,24 @@ const Basket = (props) => {
     if (isValid && isValidCity) {
       setDirty(true);
       setIsLoading(true);
-      fetch(`https://app.aaccent.su/js/confirm.php`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: new Date().getTime(),
-          firstName: firstName,
-          phone: phone,
-          cartItems,
-        }),
-      })
+      fetch(
+        `https://task-react-4ea21-default-rtdb.europe-west1.firebasedatabase.app/notes.json`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: new Date().getTime(),
+            firstName: firstName,
+            phone: phone,
+            cartItems,
+          }),
+        }
+      )
         .then((res) => (res.ok ? res.json() : Promise.reject(res)))
         .then((data) => {
-          setData(data);
+          setData("Ok, data has been sent successfully");
           setIsLoading(false);
           openModelFormChange();
           console.log(data);
