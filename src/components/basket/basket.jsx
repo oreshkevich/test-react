@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CheckoutItem } from "../checkout-item/checkout-item";
+import { useNavigate } from "react-router-dom";
 import { Modal } from "../modal/modal";
 import "./basket.scss";
 import Spinner from "./../spinner/spinner";
@@ -45,11 +46,12 @@ const Basket = (props) => {
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [data, setData] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
+  const navigate = useNavigate();
   const reset = () => {
     setFirstName("");
     setPhone("");
     clearItemPost();
+    navigate("/");
   };
   const validateName = (val) => {
     return val.length > 3;

@@ -132,3 +132,45 @@ input:-moz-placeholder {
 .small {
   color: rgb(139, 8, 8);
 }
+
+@media (max-width: 1050px) {
+  .checkout-page {
+    width: 75%;
+  }
+}
+@media (max-width: 786px) {
+  .checkout-page {
+    width: 100%;
+  }
+  .form__input {
+    width: 100%;
+  }
+}
+@media (max-width: 414px) {
+  .checkout-item {
+    flex-direction: column;
+  }
+  .checkout-page .checkout-header {
+    display: none;
+  }
+  .checkout-item .name,
+  .checkout-item .quantity,
+  .checkout-item .price {
+    width: 100%;
+    text-align: center;
+  }
+  .checkout-item .quantity {
+    display: block;
+  }
+  span {
+    margin-top: 10px;
+  }
+  .checkout-page .total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 22px;
+  }
+  .form__wrapper {
+    flex-direction: column;
+  }
+}
