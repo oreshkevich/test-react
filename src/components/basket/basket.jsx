@@ -40,7 +40,7 @@ const Basket = (props) => {
   const [firstName, setFirstName] = useState("");
   const [phone, setPhone] = useState("");
   const [valid, setValid] = useState(true);
-  const [validCity, setValidCity] = useState(true);
+  const [validPhone, setValidPhone] = useState(true);
   const [Dirty, setDirty] = useState(true);
   const [firstNameDirty, setFirstNameDirty] = useState(false);
   const [phoneDirty, setPhoneDirty] = useState(false);
@@ -63,16 +63,16 @@ const Basket = (props) => {
   };
   const validateChange = () => {
     const isValid = validateName(firstName);
-    const isValidCity = validatePhone(phone);
+    const isValidPhone = validatePhone(phone);
 
     if (firstNameDirty) {
       setValid(isValid);
     }
     if (phoneDirty) {
-      setValidCity(isValidCity);
+      setValidPhone(isValidPhone);
     }
 
-    if (isValid && isValidCity) {
+    if (isValid && isValidPhone) {
       setDirty(false);
     }
   };
@@ -81,10 +81,10 @@ const Basket = (props) => {
     const isValid = validateName(firstName);
     setValid(isValid);
 
-    const isValidCity = validatePhone(phone);
-    setValid(isValidCity);
+    const isValidPhone = validatePhone(phone);
+    setValid(isValidPhone);
 
-    if (isValid && isValidCity) {
+    if (isValid && isValidPhone) {
       setDirty(true);
       setIsLoading(true);
       fetch(
@@ -196,7 +196,7 @@ const Basket = (props) => {
               onChange={(e) => setPhone(e.target.value)}
             />
             <p className="small">
-              {validCity ? null : "enter the correct number"}
+              {validPhone ? null : "enter the correct number"}
             </p>
           </div>
         </div>
